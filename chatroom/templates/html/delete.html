@@ -1,0 +1,11 @@
+{% extends 'html/base.html' %}
+
+{% block body%}
+    <form action="" method = "post">
+        {% csrf_token %}
+        <h2>Are you sure, you want to delete 
+            <i>{{obj}}</i> ?</h2>
+        <a href="">Go Back</a>
+        <input type="submit" value="Submit"/>
+    </form>
+{% endblock body %}

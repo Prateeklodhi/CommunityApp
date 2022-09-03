@@ -1,0 +1,23 @@
+{%extends 'html/base.html' %}
+{%block link%}
+<style>
+    .user-container{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+</style>
+{%endblock link%}
+{% block body %}
+<h3>{{user.username}}</h3>
+<div class="user-container">
+    <div>
+        {% include 'html/topic_component.html' %}
+    </div>
+    <div>
+        {% include 'html/feed_component.html'%}
+    </div>
+    <div>
+        {% include 'html/activity_component.html' %}
+    </div>
+</div>
+{% endblock body %}

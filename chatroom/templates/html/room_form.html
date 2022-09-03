@@ -1,0 +1,9 @@
+{%extends 'html/base.html'%}
+{% block body %}
+    <form action="" method = "Post">
+        {%csrf_token%}
+        <h2>Create rooms</h2>
+        {{form.as_p}}
+        <input type="submit" value="Submit">
+    </form>
+{% endblock body %}
